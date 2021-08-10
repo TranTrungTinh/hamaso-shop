@@ -25,7 +25,12 @@
     },
     "description": {
       "type": "string",
-      "required": true
+      "required": true,
+      "minLength": 50,
+      "maxLength": 500
+    },
+    "filterOptions": {
+      "type": "json"
     }
   }
 }

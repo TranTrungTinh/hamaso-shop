@@ -1,0 +1,32 @@
+{
+  "name": "hamaso-admin-portal",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.3",
+    "vue-router": "^4.0.11"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "@tailwindcss/forms": "^0.3.3",
+    "@tailwindcss/line-clamp": "^0.2.1",
+    "@tailwindcss/typography": "^0.4.1",
+    "@types/tailwindcss": "^2.2.1",
+    "@vitejs/plugin-vue": "^1.4.0",
+    "@vue/compiler-sfc": "^3.2.3",
+    "autoprefixer": "^10.3.1",
+    "eslint": "^7.29.0",
+    "eslint-formatter-friendly": "^7.0.0",
+    "eslint-plugin-vue": "^7.12.1",
+    "postcss": "^8.3.5",
+    "postcss-loader": "^6.1.0",
+    "tailwindcss": "^2.2.7",
+    "vite": "^2.5.0",
+    "vite-plugin-eslint": "^1.3.0",
+    "vue-eslint-parser": "^7.6.0"
+  }
+}

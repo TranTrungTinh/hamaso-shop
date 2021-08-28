@@ -1,7 +1,3 @@
-<script setup>
-import ButtonRepo from '@/components/ButtonRepo.vue'
-</script>
-
 <template>
   <div class="bg-gray-50">
     <div
@@ -22,7 +18,6 @@ import ButtonRepo from '@/components/ButtonRepo.vue'
             >Back Home</router-link
           >
         </div>
-        <ButtonRepo />
       </div>
     </div>
   </div>

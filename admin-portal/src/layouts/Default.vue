@@ -1,17 +1,31 @@
 <template>
-  <q-layout view="hHh lpR fFf" class="bg-grey-1">
-    <q-header bordered class="bg-white text-grey-8" height-hint="64">
-      <q-toolbar flat class=" text-black">
+  <q-layout
+    view="hHh lpR fFf"
+    class="bg-grey-1"
+  >
+    <q-header
+      bordered
+      class="bg-white text-grey-8"
+      height-hint="64"
+    >
+      <q-toolbar
+        flat
+        class=" text-black"
+      >
         <q-btn
           flat
           dense
           round
-          @click="toggleLeftDrawer"
           aria-label="Menu"
           icon="menu"
           class="q-mr-sm"
+          @click="toggleLeftDrawer"
         />
-        <q-separator dark vertical inset /> 
+        <q-separator
+          dark
+          vertical
+          inset
+        /> 
         <q-toolbar-title>
           ADMIN PORTAL
         </q-toolbar-title>
@@ -20,13 +34,23 @@
 
         <div class="q-gutter-sm row items-center no-wrap">
           <div>{{ email }}</div>
-          <q-btn round flat>
-            <q-avatar color="primary" text-color="white" size="30px">
+          <q-btn
+            round
+            flat
+          >
+            <q-avatar
+              color="primary"
+              text-color="white"
+              size="30px"
+            >
               T
             </q-avatar>
             <q-menu>
               <q-list style="min-width: 200px">
-                <q-item clickable @click="showDialog">
+                <q-item
+                  clickable
+                  @click="showDialog"
+                >
                   <q-item-section side>
                     <q-icon name="logout" />
                   </q-item-section>
@@ -44,33 +68,54 @@
       class="text-black column"
       :width="280"
     >
-        <q-list >
-          <q-item
-            v-for="item in routes"
-            active-class="bg-teal-1 text-grey-8"
-            :key="item.name"
-            :to="item.redirect"
-            class="text-black bg-grey-3"
-            clickable
-            v-ripple
-          >
-            <q-item-section avatar>
-              <q-icon :name="item.meta.icon" />
-            </q-item-section>
-            <q-item-section>{{ item.meta.title }}</q-item-section>
-          </q-item>
-        </q-list>
+      <q-list>
+        <q-item
+          v-for="item in routes"
+          :key="item.name"
+          v-ripple
+          active-class="bg-teal-1 text-grey-8"
+          :to="item.redirect"
+          class="text-black bg-grey-3"
+          clickable
+        >
+          <q-item-section avatar>
+            <q-icon :name="item.meta.icon" />
+          </q-item-section>
+          <q-item-section>{{ item.meta.title }}</q-item-section>
+        </q-item>
+      </q-list>
     </q-drawer>
-    <q-dialog v-model="confirm" persistent>
+    <q-dialog
+      v-model="confirm"
+      persistent
+    >
       <q-card>
         <q-card-section class="row items-center">
-          <q-avatar icon="logout" color="primary" text-color="white" />
+          <q-avatar
+            icon="logout"
+            color="primary"
+            text-color="white"
+          />
           <span class="q-ml-sm">Are you sure you want to sign out?</span>
         </q-card-section>
 
         <q-card-actions align="right">
-          <q-btn flat dense no-caps label="Cancel" color="negative" v-close-popup />
-          <q-btn dense no-caps label="Confirm" color="primary" v-close-popup @click="signOut" />
+          <q-btn
+            v-close-popup
+            flat
+            dense
+            no-caps
+            label="Cancel"
+            color="negative"
+          />
+          <q-btn
+            v-close-popup
+            dense
+            no-caps
+            label="Confirm"
+            color="primary"
+            @click="signOut"
+          />
         </q-card-actions>
       </q-card>
     </q-dialog>
@@ -107,7 +152,8 @@ export default {
     const toggleLeftDrawer = () => {
       leftDrawerOpen.value = !leftDrawerOpen.value
     }
-    async function signOut () {
+
+    const signOut = async () => {
     }
 
     function showDialog() {

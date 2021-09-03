@@ -20,19 +20,19 @@ const routes = [
             path: "/products/search",
             name: "products-list",
             meta: { title: "Products", icon: "question_answer" },
-            component: () => import("@/views/Home.vue"),
+            component: () => import("@/pages/Home.vue"),
           },
           {
             path: "/products/:id",
             name: "product-detail",
             meta: { title: "Detail", icon: "question_answer" },
-            component: () => import("@/views/About.vue"),
+            component: () => import("@/pages/About.vue"),
           },
         ],
       },
     ],
   },
-  { path: '/:path(.*)', component: () => import("@/views/NotFound.vue") },
+  { path: '/:path(.*)', component: () => import("@/pages/NotFound.vue") },
 ]
 
 

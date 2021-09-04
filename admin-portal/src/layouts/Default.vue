@@ -10,7 +10,7 @@
     >
       <q-toolbar
         flat
-        class=" text-black"
+        class="text-black"
       >
         <q-btn
           flat
@@ -66,7 +66,7 @@
       v-model="leftDrawerOpen"
       bordered
       class="text-black column"
-      :width="280"
+      :width="200"
     >
       <q-list>
         <q-item

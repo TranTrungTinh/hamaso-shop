@@ -23,6 +23,12 @@ const routes = [
             component: () => import("@/pages/Home.vue"),
           },
           {
+            path: "/products/create",
+            name: "product-create",
+            meta: { title: "Create product", icon: "question_answer" },
+            component: () => import("@/pages/New.vue"),
+          },
+          {
             path: "/products/:id",
             name: "product-detail",
             meta: { title: "Detail", icon: "question_answer" },

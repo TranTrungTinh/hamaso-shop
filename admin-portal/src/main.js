@@ -5,10 +5,9 @@ import { createVuexStore } from '@/store'
 import quasarUserOptions from './quasar-user-options'
 import App from './App.vue'
 
-const store = createVuexStore()
 const app = createApp(App)
 
 app.use(router)
-app.use(store)
+app.use(createVuexStore())
 app.use(Quasar, quasarUserOptions)
 app.mount('#app')

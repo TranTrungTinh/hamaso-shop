@@ -7,7 +7,6 @@
         class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
       >
         About Page
-        <br />
         <span class="text-indigo-600">Admin Portal</span>
       </h2>
       <div class="flex mt-8 lg:flex-shrink-0 lg:mt-0">
@@ -22,3 +21,17 @@
     </div>
   </div>
 </template>
+
+<script>
+import axios from 'axios'
+import { reactive } from 'vue'
+
+export default {
+  async setup() {
+    const mock = await reactive(axios.get('https://jsonplaceholder.typicode.com/todos/1'))
+    return {
+      mock
+    };
+  }
+}
+</script>

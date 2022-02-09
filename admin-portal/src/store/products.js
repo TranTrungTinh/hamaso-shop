@@ -70,7 +70,7 @@ const actions = {
   [ProductModuleActions.FetchDetail]({ commit }, params) {
     commit(ProductModuleListMutations.SetDetailFetching, true)
     commit(ProductModuleListMutations.SetDetailData, null)
-    return nodepress
+    return hamaso
       .get(`${PRODUCTS_API_PATH}/${params.productId}`)
       .then(productDetail => {
         return new Promise(resolve => {

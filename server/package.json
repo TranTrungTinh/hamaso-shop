@@ -11,7 +11,7 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "knex": "0.95.11",
+    "knex": "1.0.2",
     "strapi": "3.6.8",
     "strapi-admin": "3.6.8",
     "strapi-connector-mongoose": "^3.6.8",
